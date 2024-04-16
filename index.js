@@ -1,5 +1,5 @@
 console.log('Hello world!')
-let test = 'test'
+let test = 'test '
 test = test + 5
 console.log (test)
 test = test + 10
