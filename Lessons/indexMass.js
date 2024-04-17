@@ -1,19 +1,20 @@
-const weightDenys = 82;
-const heightDenys = 1.73;
-const weightPetr = 72;
-const heightPetr = 1.88;
+const weightDenys = 77,
+    heightDenys = 1.86,
+    weightPetr = 72,
+    heightPetr = 1.88;
 
-let resultDenys;
-let resultPetr;
-let result;
+let indexDenys,
+    indexPetr,
+    result;
 
-resultDenys = weightDenys / heightDenys ** 2;
-resultPetr = weightPetr / heightPetr ** 2;
+indexDenys = weightDenys / heightDenys ** 2;
+indexPetr = weightPetr / heightPetr ** 2;
 
-console.log('Denys: ', resultDenys);
-console.log('Petr: ', resultPetr);
+console.log('Індекс маси:')
+console.log('Denys: ', indexDenys);
+console.log('Petr: ', indexPetr);
 
-result = resultDenys < resultPetr;
+result = indexDenys < indexPetr;
 console.log('Індекс Дениса менше за Петра ', Boolean(result));
-result = resultPetr < resultDenys;
+result = indexPetr < indexDenys;
 console.log('Індекс Петра менше за Дениса ', Boolean(result));
