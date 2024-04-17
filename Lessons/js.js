@@ -1,7 +1,16 @@
-console.log('Hello')
+let result;
+let x = 1;
+x = '100';
 
-console.log('world')
+x = Boolean(x);
+result = +x;
 
-alert('Hello');
+//result = 
+Number()
+String()
+Boolean()
 
-[1, 2].forEach(alert);
+console.log(typeof result)
+console.log(x)
+console.log(String(x))
+console.log(Number(x))
