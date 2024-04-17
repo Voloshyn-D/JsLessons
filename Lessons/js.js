@@ -1,16 +1,8 @@
-let result;
-let x = 1;
-x = '100';
+const firstName = prompt("Напишіть перше ім'я");
+const secondName = prompt("Напишіть друге ім'я");
 
-x = Boolean(x);
-result = +x;
+let randomNumber = Math.floor(Math.random() * 100);
+console.log(randomNumber);
 
-//result = 
-Number()
-String()
-Boolean()
-
-console.log(typeof result)
-console.log(x)
-console.log(String(x))
-console.log(Number(x))
+//alert("Сумістнісь імен " + firstName + " + " + secondName + " = " + randomNumber + "%");
+alert(`Сумістнісь імен ${firstName} + ${secondName} = ${randomNumber}%`);
