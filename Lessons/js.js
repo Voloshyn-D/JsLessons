@@ -2,6 +2,6 @@ console.log('Hello')
 
 console.log('world')
 
-//alert('Hello');
+alert('Hello');
 
-//[1, 2].forEach(alert);
+[1, 2].forEach(alert);
