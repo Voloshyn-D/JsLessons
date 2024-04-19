@@ -1,25 +1,17 @@
-const firstName = prompt("Напишіть перше ім'я");
-const secondName = prompt("Напишіть друге ім'я");
+'use strict'
 
-let randomNumber = Math.floor(Math.random() * 100);
-//console.log(randomNumber);
+function ask(question, yes, no) {
+    if (confirm(question)) {
+        yes()
+    } else no()
+}
 
-//alert("Сумістнісь імен " + firstName + " + " + secondName + " = " + randomNumber + "%");
-//alert(`Сумістнісь імен ${firstName} + ${secondName} = ${randomNumber}%`);
+/*function showOk() {
+    alert("Дякую за згоду")
+}
 
-if (randomNumber < 33 && firstName != null && secondName != null 
-    && firstName !="" && secondName !="") {
-    alert(`Результат сумістності імен ${firstName} і ${secondName} дорівнює
-${randomNumber}% спробуйте пошукати інше ім'я`)
-}
-else if (randomNumber >= 33 && randomNumber < 66 && firstName != null 
-    && secondName != null && firstName !="" && secondName !="") {
-    alert(`Результат сумістності імен ${firstName} і ${secondName} дорівнює
-${randomNumber}% сумістність хороша але може бути краще`)
-}
-else if (randomNumber > 66 && firstName != null && secondName != null 
-    && firstName !="" && secondName !="") {
-    alert(`Результат сумістності імен ${firstName} і ${secondName} дорівнює
-${randomNumber}% Ідеальна сумістність`)
-}
-else { alert("Error Спробуйте ввести імена знову") }
+function showCancel() {
+    alert("Відміна")
+}*/
+
+ask("Ви згодні?", () => alert("Дякую за згоду"), () => alert("Відміна"));
