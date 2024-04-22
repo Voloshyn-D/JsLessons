@@ -1,33 +1,23 @@
-const user = {
-    name: "John",
-    age: 30,
-    placeOfBirth: {
-        coutry: "UA",
-        city: "Kharkov"
-    }
+const firsName = "John"
+const lastName = "Travolta"
+
+function calcAge(){
+    return 2023 - this.birthYear
 }
 
-user.placeOfBirth.coutry = "USA"
-user.placeOfBirth["dateOfBirth"] = 1999
-//delete user.placeOfBirth.city
-delete user["placeOfBirth"].city
-console.log(user)
-/*user.sex = "male"
-console.log(user)
+const userFirst = {               
+    firsName,
+    lastName,
+    birthYear: 1999,
+    calcAge
+}
 
-delete user.sex
-console.log(user)*/
+const userSecond = {               //this = user
+    firsName,
+    lastName,
+    birthYear: 1924,
+    calcAge
+}
 
-/*user["sex"] = "male"
-console.log(user)
-
-delete user["sex"]
-console.log(user)*/
-
-/*const propertyName = "newProperty"
-
-user[propertyName + " 2"] = "propertyValue"
-console.log(user["newProperty 2"])*/
-
-//const answer = prompt("Напишіть слово name чи age")
-//alert(user[answer])
+console.log(userFirst.calcAge())
+console.log(userSecond.calcAge())
