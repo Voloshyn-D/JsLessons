@@ -23,41 +23,33 @@
 2. - Не забывайте про сокращенную запись свойств.
 3. - Не забывайте про метод this.
 */
-const weightDenys = 65,
-    heightDenys = 1.8,
-    weightPetr = 72,
-    heightPetr = 1.88;
 
-function resIndexMassDenys() {
-    return this.weightDenys / this.heightDenys ** 2
+function resIndexMass() {
+    this.resBmi = this.weight / this.height ** 2
+    return this.resBmi
 }
 
-const person1 = {
+const Petr = {
     name: "Petr",
-    weightPetr,
-    heightPetr,
-    resIndexMassPetr() {
-        return this.weightPetr / this.heightPetr ** 2
-    }
+    weight: 72,
+    height: 1.88,
+    resIndexMass
 }
 
-const person2 = {
+const Denys = {
     name: "Denys",
-    weightDenys,
-    heightDenys,
-    resIndexMassDenys
+    weight: 77,
+    height: 1.86,
+    resIndexMass
 }
 
-if (person1.resIndexMassPetr() > person2.resIndexMassDenys()) {
-    console.log(`Індекс маси тіла ${person1.name} = ${person1.resIndexMassPetr()} 
-більше індекса маси ${person2.name} = ${person2.resIndexMassDenys()}`)
-} else if (person2.resIndexMassDenys() > person1.resIndexMassPetr()) {
-    console.log(`Індекс маси тіла ${person2.name} = ${person2.resIndexMassDenys()} 
-більше індекса маси ${person1.name} = ${person1.resIndexMassPetr()}`)
+Petr.resIndexMass()
+Denys.resIndexMass()
+
+if (Petr.resIndexMass() > Denys.resIndexMass()) {
+    console.log(`Індекс маси тіла ${Petr.name} = ${Petr.resIndexMass()} 
+більше індекса маси ${Denys.name} = ${Denys.resIndexMass()}`)
+} else if (Denys.resIndexMass() > Petr.resIndexMass()) {
+    console.log(`Індекс маси тіла ${Denys.name} = ${Denys.resIndexMass()} 
+більше індекса маси ${Petr.name} = ${Petr.resIndexMass()}`)
 } else console.log("Сталася помилка")
-
-/*console.log(person1)
-console.log(person1.resIndexMassPetr())
-console.log(person2)
-console.log(person2.resIndexMassDenys())*/
-
