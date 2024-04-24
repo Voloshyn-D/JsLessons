@@ -1,37 +1,21 @@
 'use strict'
 
-const arr2 = []
-
-const arr = [
-    "John",
-    "Travolta",
-    2024 - 1992,
-    "UA",
-    true,
-    ["Anna", "Petr", "Den"],
-    false
-]
 /*
-for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] !== "string") {continue} 
-    console.log(arr[i])
-}
-*/
-for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] === "number") break 
-    console.log(arr[i])
-}
-/*
-for (let i = 0; i < arr.length; i++) {
-    console.log(typeof arr[i])
-    arr2.push(typeof arr[i])
-}
+let i = 100
 
-console.log(arr2)
+do {
+    console.log(`message ${i}`)
+    i++
+} while (i <= 10)
 */
-/*for (let i = 1; i <= 10; i++) {
-    if (i > 1 && i <= 4) {
-        console.log(`Это сообщение появилось ${i} раза`)
+
+let someNumber = Math.floor(Math.random() * 10) 
+
+while (someNumber !== 10) {
+    console.log(`рандомне число = ${someNumber}`)
+    someNumber = Math.floor(Math.random() * 10) +1
+    if (someNumber === 10) {
+        console.log("Win number = 10")
     }
-    else console.log(`Это сообщение появилось ${i} раз`)
-}*/
+}
+
