@@ -1,19 +1,16 @@
 'use strict'
 /*
-let header = document.querySelector(".header")
-let navList = document.querySelector(".nav__list")
-
-console.log(header.firstChild);
-console.log(navList.childNodes);
+let header = document.querySelector("h1");
+let secondHeader = document.createElement("h2");
+console.log(header);
+secondHeader.innerHTML = "Я заголовок другого рівня";
+header.insertAdjacentHTML("afterbegin", "<p>Some text</p>")
+console.log(secondHeader);
 */
-let elem = document.querySelector("h1")
-let oldDate = elem.innerHTML;
+/*
+let header = document.querySelector("h1");
+header.classList.add("newClass");
+*/
+let img = document.querySelector("img")
 
-//console.log(elem.innerHTML);
-
-//elem.innerHTML = `<p>${oldDate}</p> <p>Hello! i am a new text</p>`
-elem.outerHTML = `<p>Hello! I am a new text</p>`
-
-console.log(elem.firstChild);
-
-elem.firstChild.data = "I am a new comment"
+img.src = "https://i.pinimg.com/236x/03/77/74/0377745d3e1e39a79937aa6a235fc5c6.jpg";
