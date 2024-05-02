@@ -9,10 +9,7 @@ let elemQuantity = document.querySelector(".score");
 let elemRecord = document.querySelector(".highscore");
 let elemBody = document.querySelector("body");
 
-
 let attemp = 20;
-let record;
-
 
 function randomNumber() {
     let newNumber = Math.floor(Math.random() * 100);
@@ -25,38 +22,36 @@ let newNumber = randomNumber();
 
 function resCheck() {
     let userNumber = Number(elemInput.value);
-    if (userNumber == newNumber && attemp != false) {
+    if (userNumber == newNumber && attemp != 1) {
         elemHeader.innerHTML = "Перемога 🏆";
         elemOutput.innerHTML = newNumber;
-        //elemBody.style.background = "#60b347";
         elemBody.classList.add("newStyle")
         elemRecord.textContent = attemp;
         return attemp;
-    } else if (userNumber < newNumber && attemp != false) {
+    } else if (userNumber < newNumber && attemp != 1) {
         elemHeader.innerHTML = "Замало";
         attemp--;
         elemQuantity.textContent = attemp;
-    } else if (userNumber > newNumber && attemp != false) {
+    } else if (userNumber > newNumber && attemp != 1) {
         elemHeader.innerHTML = "Забагато";
         attemp--;
         elemQuantity.textContent = attemp;
-    } else if (attemp == false) {
+    } else {
         elemQuantity.textContent = 0;
         elemHeader.innerHTML = "💥Ви програли💥";
     }
 }
 
-elemButton.addEventListener("click", () => { record = resCheck() })
+elemButton.addEventListener("click", resCheck)
 
 elemButtonAgain.addEventListener("click", () => {
     attemp = 20;
     elemBody.classList.remove("newStyle")
-    elemRecord.textContent = record;
     elemOutput.innerHTML = "?";
     elemHeader.textContent = "Почніть вгадувати...";
     newNumber = randomNumber();
     elemQuantity.textContent = attemp;
     elemInput.value = "";
 })
-console.log(newNumber);
+//console.log(newNumber);
 
