@@ -88,6 +88,5 @@ let team2 = 6.5
 
 let { team1, x: draw, team2 } = game.odds;
 console.log(draw);
-console.log(game.odds);
-console.log(game.odds.x);
+
 
